@@ -7,7 +7,7 @@ def proyectarPts(T, wz):
     assert(T.shape[1] == wz.shape[0]) # multiplicacion matricial valida   
     xy = None
     ############### Insert code here!! ######################3    
-
+    xy = T @ wz
     ############### Insert code here!! ######################3
     return xy
 
@@ -55,7 +55,8 @@ def grid_plot(ax, ab, limits, a_label, b_label):
 def main():
     print('Ejecutar el programa')
     # generar el tipo de transformacion dando valores a la matriz T
-    T = pd.read_csv('T.csv', header=None).values
+    T = pd.read_csv("T.csv", header=None).values
+
     corners = np.array([[0,0],[100,100]])
     wz = pointsGrid(corners)
     vistform(T, wz, 'Deformar coordenadas')
