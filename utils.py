@@ -42,10 +42,3 @@ def matrix_multiplication(matrix1: np.ndarray, matrix2: np.ndarray):
             res_matrix[i][j] = inner_product(matrix1[i], matrix2[:, j])
 
     return res_matrix
-
-
-matrix1 = np.array([[1, 2, 3], [3, 4, 5]])
-matrix2 = np.array([[0, 1], [1, 0], [1, 1]])
-print(matrix1)
-print(matrix2)
-print(matrix_multiplication(matrix1, matrix2))
